@@ -23,9 +23,8 @@ class GroupsController < ApplicationController
     else
       render :new
     end
-
-    redirect_to groups_path
   end
+
 
   def update
     @group = Group.find(params[:id])
@@ -33,6 +32,7 @@ class GroupsController < ApplicationController
       redirect_to groups_path, notice: "Update Success"
     else
       render :edit
+    end
   end
 
   def destroy
